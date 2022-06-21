@@ -1,0 +1,55 @@
+/*Tailwind CSS is utility CSS framework*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@layer base {
+    html {
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+/*Custom CSS components*/
+
+@layer components {
+    .btn-hover {
+        @apply
+        hover:shadow-md cursor-pointer;
+    }
+
+    .btn {
+        @apply
+        py-2 px-4 text-white font-bold rounded-md
+        btn-hover
+        hover:ring-2 ring-gray-300 ring-opacity-50
+    }
+
+    .btn-light {
+        @apply btn bg-gray-200 text-black
+    }
+
+    .btn-primary {
+        background-color: #128079;
+        @apply btn
+    }
+
+    .btn-danger {
+        @apply btn bg-white text-red-500
+    }
+
+    .card {
+        @apply
+        rounded-md p-3
+    }
+
+    .box-active {
+        @apply
+        ring-2 ring-green-700 ring-opacity-75 shadow-lg bg-green-100;
+        background-color: rgba(217, 234, 230, 0.7) !important;
+    }
+
+
+}
